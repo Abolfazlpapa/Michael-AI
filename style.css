@@ -3,9 +3,24 @@ body {
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
+  padding-top: 50px;
 }
 
 h1 {
   color: #00aaff;
-  font-size: 40px;
+  font-size: 45px;
+}
+
+p {
+  font-size: 20px;
+  color: #cccccc;
+}
+
+button {
+  background: #00aaff;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-size: 18px;
 }
