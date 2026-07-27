@@ -1,52 +1,23 @@
 body {
+  margin: 0;
+  padding: 20px;
   background: #020617;
   color: white;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
 }
 
 .app {
   max-width: 450px;
   margin: auto;
-  text-align: center;
 }
 
-h1 {
-  color: #00aaff;
-  font-size: 40px;
-}
-
-.chat-box {
-  background: #111827;
-  border-radius: 20px;
-  padding: 20px;
-  height: 300px;
-  overflow-y: auto;
-  text-align: right;
-  margin-bottom: 20px;
-}
-
-input {
-  width: 70%;
-  padding: 15px;
-  border-radius: 20px;
-  border: none;
-}
-
-button {
-  padding: 15px;
-  border-radius: 20px;
-  border: none;
-  background: #00aaff;
-  color: white;
-  font-size: 16px;
-}
 .profile {
   background: #111827;
   border-radius: 25px;
   padding: 20px;
   margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,170,255,0.15);
 }
 
 .avatar {
@@ -55,26 +26,77 @@ button {
 }
 
 .profile h1 {
-  margin: 5px;
+  color: #00aaff;
+  margin: 10px 0;
 }
 
 .profile p {
   color: #94a3b8;
 }
+
+#counter {
+  color: #00e5ff;
+  font-weight: bold;
+}
+
+.chat-box {
+  background: #111827;
+  border-radius: 20px;
+  padding: 15px;
+  height: 350px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.05);
+}
+
+.user-message,
+.michael-message {
+  padding: 12px 16px;
+  border-radius: 20px;
+  margin: 10px 0;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
 .user-message {
   background: #00aaff;
-  color: white;
-  padding: 12px;
-  border-radius: 20px;
-  margin: 10px;
+  margin-left: auto;
   text-align: right;
 }
 
 .michael-message {
   background: #1f2937;
-  color: white;
-  padding: 12px;
-  border-radius: 20px;
-  margin: 10px;
+  margin-right: auto;
   text-align: left;
-}  
+}
+
+input {
+  width: calc(100% - 30px);
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  background: #00aaff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
