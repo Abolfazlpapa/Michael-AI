@@ -1,23 +1,43 @@
-const CACHE_NAME = "michael-ai-v1";
+const CACHE_NAME = "michael-ai-v2";
 
 const filesToCache = [
+  "./",
   "index.html",
   "style.css",
   "script.js",
   "manifest.json",
-  "icon.svg"
+  "icon.svg",
+  "premium.html"
 ];
 
-self.addEventListener("install", function(event) {
+self.addEventListener("install", (event) => {
+  self.skipWaiting();
+
   event.waitUntil(
     caches.open(CACHE_NAME)
-    .then(cache => cache.addAll(filesToCache))
+      .then(cache => cache.addAll(filesToCache))
   );
 });
 
-self.addEventListener("fetch", function(event) {
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(
+        keys.map(key => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
+          }
+        })
+      )
+    )
+  );
+
+  self.clients.claim();
+});
+
+self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request)
-    .then(response => response || fetch(event.request))
+      .then(response => response || fetch(event.request))
   );
 });
