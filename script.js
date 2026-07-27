@@ -9,6 +9,7 @@ if (freeMessages <= 0) {
 }
 
 freeMessages--;
+document.getElementById("counter").innerHTML = "پیام رایگان: " + freeMessages;
     alert("لطفاً یک پیام بنویسید");
     return;
   }
