@@ -1,14 +1,17 @@
 {
   "name": "Michael AI",
   "short_name": "Michael",
-  "start_url": "index.html",
+  "description": "Michael AI - دستیار هوشمند شخصی",
+  "start_url": "./index.html",
   "display": "standalone",
-"background_color": "#020617",
-"theme_color": "#00aaff",
-"icons": [
-  {
-    "src": "icon.svg",
-    "sizes": "512x512",
-    "type": "image/svg+xml"
-  }
-] 
+  "background_color": "#020617",
+  "theme_color": "#00aaff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
