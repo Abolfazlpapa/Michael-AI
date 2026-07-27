@@ -1,7 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Michael AI</title>
+
+  <meta name="theme-color" content="#00aaff">
+  <meta name="description" content="Michael AI - دستیار هوشمند شخصی">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -9,25 +19,37 @@
 
 <div class="app">
 
-<div class="profile">
-  <div class="avatar">🤖</div>
-  <h1>Michael AI</h1>
-  <p>دستیار هوشمند شخصی شما</p>
-<p id="counter">پیام رایگان: 25</p>
-</div>
+  <div class="profile">
+    <div class="avatar">🤖</div>
 
-<div class="chat-box">
-  <p>Michael: سلام! من مایکل هستم. چطور کمکت کنم؟</p>
-</div>
+    <h1>Michael AI</h1>
 
-<input id="message" placeholder="پیام خود را بنویس...">
+    <p>دستیار هوشمند شخصی شما</p>
 
-<button onclick="sendMessage()">
-ارسال
-</button>
-<button onclick="startVoice()">
-🎙️
-</button>
+    <p id="counter">
+      پیام رایگان: 25
+    </p>
+  </div>
+
+  <div class="chat-box">
+    <div class="michael-message">
+      Michael: سلام! من مایکل هستم. چطور کمکت کنم؟ 👋
+    </div>
+  </div>
+
+  <input
+    id="message"
+    type="text"
+    placeholder="پیام خود را بنویس..."
+  >
+
+  <button onclick="sendMessage()">
+    ارسال
+  </button>
+
+  <button onclick="startVoice()">
+    🎙️
+  </button>
 
 </div>
 
