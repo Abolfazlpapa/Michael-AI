@@ -60,4 +60,21 @@ button {
 
 .profile p {
   color: #94a3b8;
-} 
+}
+.user-message {
+  background: #00aaff;
+  color: white;
+  padding: 12px;
+  border-radius: 20px;
+  margin: 10px;
+  text-align: right;
+}
+
+.michael-message {
+  background: #1f2937;
+  color: white;
+  padding: 12px;
+  border-radius: 20px;
+  margin: 10px;
+  text-align: left;
+}  
