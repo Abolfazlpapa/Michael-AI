@@ -42,3 +42,22 @@ button {
   color: white;
   font-size: 16px;
 }
+.profile {
+  background: #111827;
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+.profile h1 {
+  margin: 5px;
+}
+
+.profile p {
+  color: #94a3b8;
+} 
