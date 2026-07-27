@@ -16,7 +16,20 @@ function sendMessage() {
 
   chat.innerHTML += `
   <div class="michael-message">
-    Michael: دریافت کردم 🤖
+    let replies = [
+  "سلام! من مایکل هستم 🤖",
+  "در حال بررسی پیام شما هستم.",
+  "جالبه! بیشتر توضیح بده.",
+  "من آماده کمک به شما هستم 🚀"
+];
+
+let randomReply = replies[Math.floor(Math.random() * replies.length)];
+
+chat.innerHTML += `
+<div class="michael-message">
+Michael: ${randomReply}
+</div>
+`;
   </div>
   `;
 
