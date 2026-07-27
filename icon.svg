@@ -1,4 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<circle cx="256" cy="256" r="256" fill="#020617"/>
-<text x="50%" y="55%" font-size="220" text-anchor="middle" fill="#00aaff">M</text>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="256" cy="256" r="256" fill="url(#bg)"/>
+
+  <circle cx="256" cy="256" r="210"
+          fill="none"
+          stroke="#00aaff"
+          stroke-width="8"/>
+
+  <text x="50%"
+        y="56%"
+        font-size="220"
+        font-family="Arial, sans-serif"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#00aaff">
+    M
+  </text>
 </svg>
