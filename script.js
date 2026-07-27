@@ -8,8 +8,17 @@ function sendMessage() {
 
   let chat = document.querySelector(".chat-box");
 
-  chat.innerHTML += "<p>شما: " + message + "</p>";
-  chat.innerHTML += "<p>Michael: در حال پردازش پیام شما هستم 🤖</p>";
+  chat.innerHTML += `
+  <div class="user-message">
+    شما: ${message}
+  </div>
+  `;
+
+  chat.innerHTML += `
+  <div class="michael-message">
+    Michael: دریافت کردم 🤖
+  </div>
+  `;
 
   document.getElementById("message").value = "";
 }
