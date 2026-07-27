@@ -14,7 +14,7 @@ document.getElementById("counter").innerHTML = "پیام رایگان: " + freeM
     return;
   }
 
-  let chat = document.querySelector(".chat-box");
+  let chat: document.querySelector(".chat-box");
 
   chat.innerHTML += `
   <div class="user-message">
