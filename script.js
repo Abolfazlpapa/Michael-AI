@@ -22,3 +22,6 @@ function sendMessage() {
 
   document.getElementById("message").value = "";
 }
+function startVoice() {
+  alert("🎙️ Michael AI آماده دریافت صداست!");
+}
