@@ -1,8 +1,20 @@
 let freeMessages = 25;
 
 async function askMichael(userMessage) {
-  // اینجا بعداً به هوش مصنوعی واقعی وصل می‌شویم
   return "سلام! من Michael AI هستم. به‌زودی با هوش مصنوعی واقعی پاسخ می‌دهم. 🤖";
+}
+
+function saveChat() {
+  const chat = document.querySelector(".chat-box").innerHTML;
+  localStorage.setItem("michaelChat", chat);
+}
+
+function loadChat() {
+  const chat = localStorage.getItem("michaelChat");
+
+  if (chat) {
+    document.querySelector(".chat-box").innerHTML = chat;
+  }
 }
 
 async function sendMessage() {
@@ -22,6 +34,7 @@ async function sendMessage() {
   }
 
   freeMessages--;
+
   document.getElementById("counter").textContent =
     "پیام رایگان: " + freeMessages;
 
@@ -34,7 +47,7 @@ async function sendMessage() {
 
   input.value = "";
 
-  const reply = await askMichael(message);
+  let reply = await askMichael(message);
 
   chat.innerHTML += `
     <div class="michael-message">
@@ -44,14 +57,18 @@ async function sendMessage() {
   `;
 
   chat.scrollTop = chat.scrollHeight;
+
+  saveChat();
 }
 
 function startVoice() {
   alert("🎙️ قابلیت گفتگوی صوتی Michael AI به‌زودی فعال می‌شود.");
 }
 
-document.getElementById("message").addEventListener("keydown", function (event) {
+document.getElementById("message").addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
     sendMessage();
   }
 });
+
+window.onload = loadChat;
