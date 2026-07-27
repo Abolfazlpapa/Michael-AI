@@ -2,10 +2,10 @@ let freeMessages = 25;
 function sendMessage() {
   let message = document.getElementById("message").value;
 
-  if (message === "") {
-if (freeMessages <= 0) {
-  alert("پیام‌های رایگان شما تمام شده. لطفاً اشتراک تهیه کنید.");
+  if (message === "") if (freeMessages <= 0) {
+  window.location.href = "premium.html";
   return;
+}
 }
 
 freeMessages--;
