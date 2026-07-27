@@ -19,7 +19,7 @@
 
     <h1>تنظیمات Michael AI</h1>
 
-    <p>مدیریت برنامه</p>
+    <p>شخصی‌سازی دستیار شما</p>
 
   </div>
 
@@ -27,32 +27,38 @@
   <div class="chat-box">
 
     <div class="michael-message">
-      👤 نام کاربر
-      <br>
+
+      👤 نام شما:
+
+      <br><br>
+
       <input id="username" placeholder="نام خود را وارد کنید">
+
     </div>
 
 
     <div class="michael-message">
-      🌙 حالت برنامه
-      <br>
-      آماده‌سازی حالت تاریک و روشن
-    </div>
 
+      🗑️ پاک کردن تاریخچه گفتگو
 
-    <div class="michael-message">
-      🗑️ پاک کردن تاریخچه چت
-      <br>
+      <br><br>
+
       <button onclick="clearChat()">
-        پاک کردن
+        پاک کردن چت
       </button>
+
     </div>
 
   </div>
 
 
-  <button onclick="saveName()">
-    ذخیره تنظیمات
+  <button onclick="saveSettings()">
+    💾 ذخیره تنظیمات
+  </button>
+
+
+  <button onclick="goHome()">
+    🏠 بازگشت
   </button>
 
 
@@ -61,19 +67,29 @@
 
 <script>
 
-function clearChat() {
-  localStorage.removeItem("michaelChat");
-  alert("تاریخچه گفتگو پاک شد");
-}
-
-
-function saveName() {
+function saveSettings() {
 
   let name = document.getElementById("username").value;
 
   localStorage.setItem("michaelUser", name);
 
-  alert("تنظیمات ذخیره شد");
+  alert("تنظیمات ذخیره شد ✅");
+
+}
+
+
+function clearChat() {
+
+  localStorage.removeItem("michaelChat");
+
+  alert("تاریخچه چت پاک شد");
+
+}
+
+
+function goHome() {
+
+  window.location.href = "index.html";
 
 }
 
