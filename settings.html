@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Michael AI Settings</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="profile">
+
+    <div class="avatar">⚙️</div>
+
+    <h1>تنظیمات Michael AI</h1>
+
+    <p>مدیریت برنامه</p>
+
+  </div>
+
+
+  <div class="chat-box">
+
+    <div class="michael-message">
+      👤 نام کاربر
+      <br>
+      <input id="username" placeholder="نام خود را وارد کنید">
+    </div>
+
+
+    <div class="michael-message">
+      🌙 حالت برنامه
+      <br>
+      آماده‌سازی حالت تاریک و روشن
+    </div>
+
+
+    <div class="michael-message">
+      🗑️ پاک کردن تاریخچه چت
+      <br>
+      <button onclick="clearChat()">
+        پاک کردن
+      </button>
+    </div>
+
+  </div>
+
+
+  <button onclick="saveName()">
+    ذخیره تنظیمات
+  </button>
+
+
+</div>
+
+
+<script>
+
+function clearChat() {
+  localStorage.removeItem("michaelChat");
+  alert("تاریخچه گفتگو پاک شد");
+}
+
+
+function saveName() {
+
+  let name = document.getElementById("username").value;
+
+  localStorage.setItem("michaelUser", name);
+
+  alert("تنظیمات ذخیره شد");
+
+}
+
+
+</script>
+
+
+</body>
+</html>
